@@ -1,0 +1,21 @@
+{
+ 	"name": "Reddit Feed Eradicator",
+	"version": "1.1",
+	"description": "Waste too much time on Reddit? Remove the distracting feed at once",
+ 	"manifest_version": 2,
+ 	"permissions": [
+		"storage",
+		"http://www.reddit.com/",
+		"https://www.reddit.com/",
+		"http://web.reddit.com/",
+		"https://web.reddit.com/"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://www.reddit.com/", "https://www.reddit.com/","http://web.reddit.com/","https://web.reddit.com/"],
+			"css" : ["eradicator.css"],
+			"run_at": "document_start"
+		}
+	],
+ 	"icons": { "16": "icon-16.png", "128": "icon-128.png" }
+}
